@@ -22,6 +22,14 @@ end
 
 gem 'jquery-rails'
 
+# NON-DEFAULT
+gem 'haml'
+gem 'pry'
+gem 'awesome_print'
+gem 'sextant'
+gem 'thin'
+gem 'haml-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
