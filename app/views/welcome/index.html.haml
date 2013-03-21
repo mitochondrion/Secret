@@ -1,2 +1,11 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.haml
+%h2 You can tell me... 
+
+= form_for @zecret do |f|
+  .title-field
+    = f.label :title
+    = f.text_area :title
+  .body-field
+    = f.label :body
+    = f.text_area :body
+  .actions
+    = f.submit "New Secret!"

@@ -1,4 +1,6 @@
 Secret::Application.routes.draw do
+  resources :foos
+
   get "welcome/index"
 
   # The priority is based upon order of creation:
@@ -47,10 +49,13 @@ Secret::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
+be8ca745f807b0ca4e14250b5f185dcda2fd60b2
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'welcome#index'
+  
+  resources :zecrets, :only => [:index, :create, :show]
+
 
   # See how all your routes lay out with "rake routes"
 
