@@ -11,16 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320235336) do
+ActiveRecord::Schema.define(:version => 20130321034626) do
 
-  create_table "secrets", :force => true do |t|
-    t.text     "title"
-    t.text     "body"
-    t.text     "key"
-    t.datetime "go_live"
-    t.datetime "expiration"
+  create_table "foos", :force => true do |t|
+    t.text     "bar"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "zecrets", :force => true do |t|
+    t.text     "title"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "zecrets", ["title"], :name => "index_zecrets_on_title"
 
 end
