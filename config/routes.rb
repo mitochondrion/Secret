@@ -49,12 +49,16 @@ Secret::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-be8ca745f807b0ca4e14250b5f185dcda2fd60b2
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'welcome#index'
   
-  resources :zecrets, :only => [:index, :create, :show]
+  resources :zecrets, :only => [:create, :show, :find] do
+    collection do
+      get 'retrieve'
+    end
+  end
 
 
   # See how all your routes lay out with "rake routes"

@@ -1,11 +1,19 @@
-%h2 You can tell me... 
+%h2 You can tell me...
 
 = form_for @zecret do |f|
-  .title-field
-    = f.label :title
-    = f.text_area :title
-  .body-field
-    = f.label :body
-    = f.text_area :body
+  #body-field
+    = f.label :body, "Enter a zecret message below. Nobody will be able to read it without the key."
+  = f.text_area :body, size: "40x10"
   .actions
-    = f.submit "New Secret!"
+    = f.submit "New Zecret"
+
+%hr
+
+%h2 Psst, don't tell anyone...
+
+= form_tag retrieve_zecrets_path, method: "get" do
+  #secret-id-field
+    = label_tag :secret_id, "Retrieve a zecret.  Enter the zecret's id# below:"
+  = text_field_tag :zecret_id
+  .actions
+    = submit_tag "Get Zecret"

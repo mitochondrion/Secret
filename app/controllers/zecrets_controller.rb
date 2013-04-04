@@ -4,14 +4,13 @@ class ZecretsController < ApplicationController
   end
 
   def create
-    params[:zecret][:title] = "NEW SECRET"
-    params[:zecret][:body] = "#{Time.now}"
-
     @zecret = Zecret.create(params[:zecret])
 
     redirect_to @zecret
   end
 
-  def index
+  def retrieve
+    @zecret = Zecret.find(params[:zecret_id])
+    render "show"
   end
 end
