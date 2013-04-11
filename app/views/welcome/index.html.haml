@@ -1,19 +1,32 @@
 %h2 You can tell me...
 
+%p
+  %label 
+    Enter a zecret message below. Nobody will be able to read it without the password.
+    %br
+    %textarea.zecret-input{ maxlength: "2048" }
+%p
+  %label
+    Enter a password. This will be used to encrypt the zecret message.
+    %br
+    %input.password{ size: "100", maxlength: "64" }
+  %button.randomize Generate Random Password
+
 = form_for @zecret do |f|
-  #body-field
-    = f.label :body, "Enter a zecret message below. Nobody will be able to read it without the key."
-  = f.text_area :body, size: "40x10"
+  = f.hidden_field :body
   .actions
-    = f.submit "New Zecret"
+    = f.submit "Encrypt New Zecret!"
 
 %hr
 
 %h2 Psst, don't tell anyone...
 
+- if flash.alert
+  .flash.alert= flash.alert
+
 = form_tag retrieve_zecrets_path, method: "get" do
   #secret-id-field
-    = label_tag :secret_id, "Retrieve a zecret.  Enter the zecret's id# below:"
+    = label_tag :zecret_id, "Retrieve a zecret.  Enter the zecret's id# below:"
   = text_field_tag :zecret_id
   .actions
     = submit_tag "Get Zecret"

@@ -1,3 +1,14 @@
-%h3= "SECRET: "
-.secret-body
-  = "Secret: [#{@zecret.body}]"
+%h3= "ZECRET: "
+.zecret-display
+  %pre
+    = @zecret.body
+.zecret-hidden
+  = @zecret.body
+
+%p
+  %label
+    Password. Used to decrypt the zecret.
+    %br
+    %input.password{ size: "100", maxlength: "64" }
+  %button.decrypt Decrypt Zecret!
+  

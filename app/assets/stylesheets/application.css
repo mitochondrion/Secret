@@ -11,3 +11,30 @@
  *= require_self
  *= require_tree .
  */
+
+
+.zecret-display {
+  border: 2px solid black;
+  width: 600px;
+  height: 300px;
+  overflow: auto;
+  background-color: #ddd;
+}
+  
+.zecret-display pre {
+  background-color: #ddd;
+}
+
+.zecret-hidden {
+  display: none;
+}
+
+.zecret-input {
+  //border: 2px solid black;
+  width: 500px;
+  height: 300px;
+  overflow: auto;
+}
+
+
+

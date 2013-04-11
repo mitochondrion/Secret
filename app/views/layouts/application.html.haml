@@ -3,8 +3,10 @@
   %head
     %title Secret
     = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    
   %body
     #header
       %h1
