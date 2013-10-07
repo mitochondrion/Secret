@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "1.9.3"
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
@@ -34,6 +34,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'better_errors'
 end
 
 # To use ActiveModel has_secure_password
