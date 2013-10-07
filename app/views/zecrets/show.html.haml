@@ -7,8 +7,10 @@
 
 %p
   %label
-    Password. Used to decrypt the zecret.
+    Enter Zecret password to decrypt the Zecret.
     %br
     %input.password{ size: "100", maxlength: "64" }
   %button.decrypt Decrypt Zecret!
   
+%p.zecret-id= "ZECRET ID: #{@zecret.id}"
+%p= "Use this ID to retrieve this Zecret."

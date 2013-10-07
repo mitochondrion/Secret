@@ -36,5 +36,7 @@
   overflow: auto;
 }
 
-
+p.zecret-id {
+  font-weight: bold;
+}
 
