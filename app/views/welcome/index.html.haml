@@ -9,7 +9,7 @@
   %label
     Enter a password. This will be used to encrypt the zecret message.
     %br
-    %input.password{ size: "100", maxlength: "64" }
+    %input.password{ size: "100", maxlength: "64", type: "password" }
   %button.randomize Generate Random Password
 
 = form_for @zecret do |f|
