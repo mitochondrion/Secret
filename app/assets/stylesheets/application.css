@@ -15,7 +15,7 @@
 
 .zecret-display {
   border: 2px solid black;
-  width: 600px;
+  width: 6750px;
   height: 300px;
   overflow: auto;
   background-color: #ddd;
@@ -31,7 +31,7 @@
 
 .zecret-input {
   //border: 2px solid black;
-  width: 500px;
+  width: 675px;
   height: 300px;
   overflow: auto;
 }
